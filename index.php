@@ -4,6 +4,7 @@
   //Define Language file paths
   define("LANG_FR_PATH", 'include/lang/fr/');
   define("LANG_NL_PATH", 'include/lang/nl/');
+  define("LANG_EN_PATH", 'include/lang/en/');
  
   if (isset($_GET['lang'])) {
      
