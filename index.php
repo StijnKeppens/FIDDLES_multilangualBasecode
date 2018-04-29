@@ -2,9 +2,8 @@
   session_start();
  
   //Define Language file paths
-  define("LANG_DE_PATH", $_SERVER['DOCUMENT_ROOT'] . '/include/lang/de/');
-  define("LANG_EN_PATH", $_SERVER['DOCUMENT_ROOT'] . '/include/lang/en/');
- 
+  define("LANG_FR_PATH", 'include/lang/fr/');
+  define("LANG_NL_PATH", 'include/lang/nl/');
  
   if (isset($_GET['lang'])) {
      
