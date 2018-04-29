@@ -10,42 +10,45 @@
      
     // GET request found
  
-    if ($_GET['lang'] == 'de') {
+    if ($_GET['lang'] == 'fr') {
        
       // asked for the language 'de' so include the 'de.php' file
-      include LANG_DE_PATH . '/de.php';
-      $_SESSION['lang'] = 'de';
+      include LANG_FR_PATH . 'fr.php';
+      echo LANG_FR_PATH . 'fr.php';
+      $_SESSION['lang'] = 'fr';
     } else {
  
       // if not asked for 'de', include 'en.php' as default
-      include LANG_EN_PATH . '/en.php';
-      $_SESSION['lang'] = 'en';
+      include LANG_NL_PATH . 'nl.php';
+      $_SESSION['lang'] = 'nl';
     }
-  } else if (isset($_SESSION['lang'])) {
+  } elseif (isset($_SESSION['lang'])) {
  
     //SESSION variable found
  
-    if ($_SESSION['lang'] == 'de') {
+    if ($_SESSION['lang'] == 'fr') {
  
       // language already set to 'de', so include 'de.php'
-      include LANG_DE_PATH . '/de.php';
+      include LANG_FR_PATH . 'fr.php';
     } else {
  
       // SESSION variable not set to 'de', so include 'en.php' by default
-      include LANG_EN_PATH . '/en.php';
+      include LANG_NL_PATH . 'nl.php';
     }
   } else {
      
     // SESSION varibale not set, so set it to 'en' and include 'en.php' by default
-    include LANG_EN_PATH . 'en.php';
-    $_SESSION['lang'] = 'en';
+    include LANG_EN_PATH . 'nl.php';
+    $_SESSION['lang'] = 'nl';
   }
 ?>
+
 <html>
   <head>
     <title><?php echo $LANG['title']; ?></title>
   </head>
   <body>
+      <?php echo $_SESSION['lang']; ?>
     <h1><?php echo $LANG['header'];?><h1>
     <h2>abc@nomail.com</h2>
   </body>
